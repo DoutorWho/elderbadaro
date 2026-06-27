@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Pessoal</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body id="corpo-pagina">
+    <!-- Menu principal de navegação -->
+    <nav id="menu-navegacao">
+        <div id="marca-site">Meu Portfólio | Elder Badaró</div>
+        
+        <button id="botao-menu-celular" aria-label="Abrir menu">&#9776;</button>
+        
+        <ul id="lista-links">
+            <li><a href="#secao-sobre" class="link-aba ativo" data-alvo="secao-sobre">Sobre Mim</a></li>
+            <li><a href="#secao-formacao" class="link-aba" data-alvo="secao-formacao">Formação</a></li>
+            <li><a href="#secao-portfolio" class="link-aba" data-alvo="secao-portfolio">Portfólio</a></li>
+            <li><a href="#secao-contato" class="link-aba" data-alvo="secao-contato">Contato</a></li>
+            <li><button id="botao-tema">☀️ Modo Escuro</button></li>
+        </ul>
+    </nav>
+
+    <main id="conteudo-principal">
+        <!-- Seção Sobre Mim -->
+        <section id="secao-sobre" class="secao-conteudo ativa">
+            <h2>Sobre Mim</h2>
+            <div class="cartao-informativo">
+                <p>Olá! Meu nome é Elder, tenho 20 e moro em Salvador, Bahia, e sou estudante de Engenharia de Software. Sou formado no Curso Técnico de Informática e tenho grande interesse por tecnologia, automação e desenvolvimento de sistemas. Gosto de aprender novas ferramentas, criar soluções que facilitem o dia a dia das pessoas e desenvolver projetos que me permitam evoluir constantemente na área de tecnologia.</p>
+                <br>
+                <p><strong>Hobbies:</strong> Fora do universo da tecnologia, gosto de me dedicar à leitura, especialmente à literatura fantástica. Sou apaixonado pela saga Harry Potter e por livros que despertam a imaginação e ampliam a criatividade.</p>
+            </div>
+        </section>
+        <!-- Seção Formação -->
+        <section id="secao-formacao" class="secao-conteudo">
+            <h2>Formação e Cursos</h2>
+            <div class="cartao-informativo">
+                <h3>Faculdade</h3>
+                <p><strong>Engenharia de Software – Uninter (06/2025 – Atual)</strong></p>
+                <p>Graduação voltada ao desenvolvimento de software, análise de sistemas, arquitetura de aplicações, banco de dados e boas práticas de engenharia de software.</p>
+
+                <br>
+
+                <h3>Curso Técnico</h3>
+                <p><strong>Técnico em Informática – Colégio Estadual Góes Calmon (2021 – 2024)</strong></p>
+                <p>Formação com foco em manutenção de computadores, redes, lógica de programação, desenvolvimento de sistemas e fundamentos da tecnologia da informação.</p>
+            </div>
+            <div class="cartao-informativo">
+                <h3>Idiomas e Competências</h3>
+                <ul>
+                    <li><strong>Inglês:</strong> Nível básico em desenvolvimento, com foco na leitura de documentação técnica e aprendizado contínuo.</li>
+                    <li><strong>Lógica de Programação:</strong> Conhecimento em algoritmos, estruturas de controle e resolução de problemas de forma estruturada.</li>
+                    <li><strong>Python:</strong> Desenvolvimento de aplicações, programação orientada a objetos (POO), automação de tarefas e manipulação de dados.</li>
+                    <li><strong>PowerShell:</strong> Criação de scripts para automação de processos, administração de sistemas Windows e otimização de rotinas.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Seção Portfólio -->
+        <section id="secao-portfolio" class="secao-conteudo">
+            <h2>Portfólio</h2>
+            <p style="margin-bottom: 1rem;">Confira alguns dos projetos práticos que desenvolvi de forma autônoma:</p>
+            <div id="grade-portfolio">
+                <div class="item-portfolio">
+                    <h3>Jogo da velha</h3>
+                    <p>O Jogo da Velha é uma implementação em C++ do clássico jogo da velha, jogável diretamente no terminal. Criado com foco em estudo, diversão e nostalgia, este projeto traz a simplicidade da interface em ASCII com modos de jogo desafiadores.</p>
+                    <br>
+                    <a href="https://github.com/DoutorWho/JogoDaVelha" target="_blank">Ver Repositório &rarr;</a>
+                </div>
+                <div class="item-portfolio">
+                    <h3>Playlerning</h3>
+                    <p>Plataforma web educacional gamificada com foco em preparação para o ENEM e Informática, combinando livros digitais, questionários e um sistema interativo de fórum..</p>
+                    <br>
+                    <br>
+                    <a href="https://github.com/DoutorWho/Playlerning" target="_blank">Ver Repositório &rarr;</a>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Contato -->
+        <section id="secao-contato" class="secao-conteudo">
+            <h2>Contato</h2>
+            <div class="cartao-informativo">
+                <form id="formulario-contato" novalidate>
+                    <div class="grupo-formulario">
+                        <label for="campo-nome">Nome:</label>
+                        <input type="text" id="campo-nome" name="nome" required>
+                        <span class="mensagem-erro" id="erro-nome">Por favor, preencha o seu nome completo.</span>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="campo-email">E-mail:</label>
+                        <input type="email" id="campo-email" name="email" required>
+                        <span class="mensagem-erro" id="erro-email">Insira um e-mail em formato válido (exemplo: usuario@dominio.com).</span>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="campo-mensagem">Mensagem:</label>
+                        <textarea id="campo-mensagem" name="mensagem" rows="4" required></textarea>
+                        <span class="mensagem-erro" id="erro-mensagem">O campo de mensagem não pode ficar vazio.</span>
+                    </div>
+
+                    <button type="submit" id="botao-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-confirmacao" class="modal-oculta">
+        <div id="conteudo-modal">
+            <span id="fechar-modal">&times;</span>
+            <div id="icone-modal">&check;</div>
+            <h3 id="titulo-modal">Sucesso!</h3>
+            <p id="texto-modal">Mensagem enviada com sucesso!</p>
+            <button id="botao-fechar-modal">Ok</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
